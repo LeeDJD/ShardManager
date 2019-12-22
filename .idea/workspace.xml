@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1ff41418-77be-4287-a82c-9a3c6bb3dc5b" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1VJdbSVrvmiYFESfh3sgK2xRhVQ" />
+  <component name="ProjectViewState">
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1ff41418-77be-4287-a82c-9a3c6bb3dc5b" name="Default Changelist" comment="" />
+      <created>1576975202125</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1576975202125</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="621" y="134" key="#com.intellij.ide.util.MemberChooser" timestamp="1577015383079">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="621" y="134" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1010/1680.0.1280.984@0.0.1680.1010" timestamp="1577015383079" />
+    <state x="620" y="261" key="FileChooserDialogImpl" timestamp="1576975360043">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="620" y="261" key="FileChooserDialogImpl/0.0.1680.1010/1680.0.1280.984@0.0.1680.1010" timestamp="1576975360043" />
+    <state x="707" y="400" width="691" height="440" key="Github.ShareDialog" timestamp="1576977601735">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="707" y="400" width="691" height="440" key="Github.ShareDialog/0.0.1680.1010/1680.0.1280.984@0.0.1680.1010" timestamp="1576977601735" />
+    <state x="341" y="148" key="SettingsEditor" timestamp="1577015627653">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="341" y="148" key="SettingsEditor/0.0.1680.1010/1680.0.1280.984@0.0.1680.1010" timestamp="1577015627653" />
+    <state x="582" y="116" key="refactoring.ChangeSignatureDialog" timestamp="1577013728490">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="582" y="116" key="refactoring.ChangeSignatureDialog/0.0.1680.1010/1680.0.1280.984@0.0.1680.1010" timestamp="1577013728490" />
+    <state x="496" y="233" key="run.anything.popup" timestamp="1577014117615">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="496" y="233" key="run.anything.popup/0.0.1680.1010/1680.0.1280.984@0.0.1680.1010" timestamp="1577014117615" />
+  </component>
+</project>
