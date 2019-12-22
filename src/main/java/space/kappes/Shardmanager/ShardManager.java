@@ -36,7 +36,6 @@ public class ShardManager {
     }
 
     private void registerListeners() {
-        eventManager.addListener();
     }
 
     public void addShard(Shard shard) {

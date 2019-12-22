@@ -1,0 +1,4 @@
+{"shardmanager": {
+  "port": 1024,
+  "secret": "AuthSecret"
+}}
