@@ -5,7 +5,12 @@ import space.kappes.Shardmanager.core.Shard;
 
 public class ShardDisconnectedEvent extends ShardEvent {
 
-    private final String reason;
+    private String reason;
+
+
+    public ShardDisconnectedEvent(ShardManager shardmanager, Shard shard) {
+        super(shardmanager, shard);
+    }
 
     public ShardDisconnectedEvent(ShardManager shardmanager, Shard shard, String reason) {
         super(shardmanager, shard);

@@ -1,9 +1,9 @@
 package space.kappes.Shardmanager.core;
 
+import org.apache.log4j.Logger;
 import org.json.JSONObject;
 import space.kappes.Shardmanager.ShardManager;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import space.kappes.Shardmanager.event.impl.ShardDisconnectedEvent;
 import space.kappes.Shardmanager.event.impl.ShardMessageReceivedEvent;
 
 import java.io.IOException;
@@ -13,19 +13,22 @@ import java.util.Scanner;
 
 public class Shard {
 
-    private final Logger logger;
+    private final Logger logger = Logger.getLogger(getClass());
     private final ShardManager shardManager;
     private final Socket socket;
     private final PrintWriter outputWriter;
     private final Scanner inputScanner;
     private final Thread listenThread;
     private final String ip;
+    private boolean connectionAuthorized = false;
+    private boolean missingAuth = false;
+    private String name;
+    private long ping = 0L;
 
     public Shard(ShardManager shardManager, Socket socket) throws IOException {
         this.shardManager = shardManager;
         this.socket = socket;
         this.ip = socket.getInetAddress().getHostAddress();
-        this.logger = LoggerFactory.getLogger(this.getClass());
         this.outputWriter = new PrintWriter(socket.getOutputStream());
         this.inputScanner = new Scanner(socket.getInputStream());
         this.listenThread = new Thread(this::listen);
@@ -40,6 +43,8 @@ public class Shard {
                 shardManager.getEventManager().call(new ShardMessageReceivedEvent(shardManager, this, msg));
             }
         }
+        if (!missingAuth)
+            shardManager.getEventManager().call(new ShardDisconnectedEvent(shardManager, this));
     }
 
     public void sendCommand(String invoke, JSONObject jsonObject) {
@@ -57,12 +62,18 @@ public class Shard {
     }
 
     public void close(String reason) throws IOException {
+        shardManager.removeShard(this);
         sendCommand("connection_closed", new JSONObject().put("reason", reason));
         logger.debug(String.format("[ShardClose] %s(%s) -> Reason: %s",socket.getInetAddress().getHostName(), socket.getInetAddress().getHostAddress(), reason));
         inputScanner.close();
         outputWriter.close();
         socket.close();
     }
+
+    public void close() throws IOException {
+        close("Not specified.");
+    }
+
 
     public ShardManager getShardManager() {
         return shardManager;
@@ -74,5 +85,37 @@ public class Shard {
 
     public String getIp() {
         return ip;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public boolean isConnectionAuthorized() {
+        return connectionAuthorized;
+    }
+
+    public void setConnectionAuthorized(boolean connectionAuthorized) {
+        this.connectionAuthorized = connectionAuthorized;
+    }
+
+    public boolean isMissingAuth() {
+        return missingAuth;
+    }
+
+    public void setMissingAuth(boolean missingAuth) {
+        this.missingAuth = missingAuth;
+    }
+
+    public long getPing() {
+        return ping;
+    }
+
+    public void setPing(long ping) {
+        this.ping = ping;
     }
 }

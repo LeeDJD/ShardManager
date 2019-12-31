@@ -2,8 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71a6fdb0-16dc-43ad-adf3-e534ce30147b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/space/kappes/Shardmanager/command/CommandManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/space/kappes/Shardmanager/core/HeartbeatManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/space/kappes/Shardmanager/util/TimedMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/space/kappes/Shardmanager/ShardManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/space/kappes/Shardmanager/ShardManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/space/kappes/Shardmanager/core/Shard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/space/kappes/Shardmanager/core/Shard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/space/kappes/Shardmanager/core/ShardCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/space/kappes/Shardmanager/core/ShardCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/space/kappes/Shardmanager/event/impl/ShardDisconnectedEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/space/kappes/Shardmanager/event/impl/ShardDisconnectedEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/space/kappes/Shardmanager/io/config/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/space/kappes/Shardmanager/io/config/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/space/kappes/Shardmanager/io/config/ConfigManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/space/kappes/Shardmanager/io/config/ConfigManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/space/kappes/Shardmanager/net/ConnectionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/space/kappes/Shardmanager/net/ConnectionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/space/kappes/Shardmanager/net/ShardConnectionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/space/kappes/Shardmanager/net/ShardConnectionManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +68,13 @@
       </state>
     </system>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -63,8 +86,22 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/latest.log" />
   </component>
-  <component name="RunManager" selected="JAR Application.ShardManager-1.0-SNAPSHOT-all.jar">
+  <component name="RunManager" selected="Application.Launcher">
+    <configuration name="Launcher" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="space.kappes.Shardmanager.Launcher" />
+      <module name="ShardManager.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="space.kappes.Shardmanager.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ShardManager [clean shadowJar build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -106,40 +143,15 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ShardManager [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="clean" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="ShardManager-1.0-SNAPSHOT-all.jar" type="JarApplication" temporary="true">
-      <option name="JAR_PATH" value="$PROJECT_DIR$/build/libs/ShardManager-1.0-SNAPSHOT-all.jar" />
-      <method v="2" />
-    </configuration>
-    <configuration name="ShardManager-1.0-SNAPSHOT.jar" type="JarApplication" temporary="true">
-      <option name="JAR_PATH" value="$PROJECT_DIR$/build/libs/ShardManager-1.0-SNAPSHOT.jar" />
-      <method v="2" />
-    </configuration>
+    <list>
+      <item itemvalue="Application.Launcher" />
+      <item itemvalue="Gradle.ShardManager [clean shadowJar build]" />
+      <item itemvalue="Gradle.ShardManager [clean shadowJar]" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JAR Application.ShardManager-1.0-SNAPSHOT-all.jar" />
-        <item itemvalue="JAR Application.ShardManager-1.0-SNAPSHOT.jar" />
         <item itemvalue="Gradle.ShardManager [clean shadowJar build]" />
         <item itemvalue="Gradle.ShardManager [clean shadowJar]" />
-        <item itemvalue="Gradle.ShardManager [clean]" />
       </list>
     </recent_temporary>
   </component>
@@ -168,22 +180,57 @@
     </task>
     <servers />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.log" />
+  </component>
   <component name="WindowStateProjectService">
-    <state width="1637" height="251" key="GridCell.Tab.0.bottom" timestamp="1577058255213">
+    <state x="294" y="161" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577137748739">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1637" height="251" key="GridCell.Tab.0.bottom/0.0.1680.1010/1680.0.1280.984@0.0.1680.1010" timestamp="1577058255213" />
-    <state width="1637" height="251" key="GridCell.Tab.0.center" timestamp="1577058255213">
+    <state x="294" y="161" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1010/1680.0.1280.984@0.0.1680.1010" timestamp="1577137748739" />
+    <state x="890" y="159" key="#com.intellij.ide.util.MemberChooser" timestamp="1577133784876">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1637" height="251" key="GridCell.Tab.0.center/0.0.1680.1010/1680.0.1280.984@0.0.1680.1010" timestamp="1577058255213" />
-    <state width="1637" height="251" key="GridCell.Tab.0.left" timestamp="1577058255213">
+    <state x="890" y="159" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1010/1680.0.1280.984@0.0.1680.1010" timestamp="1577133784876" />
+    <state x="570" y="253" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1577182369806">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1637" height="251" key="GridCell.Tab.0.left/0.0.1680.1010/1680.0.1280.984@0.0.1680.1010" timestamp="1577058255213" />
-    <state width="1637" height="251" key="GridCell.Tab.0.right" timestamp="1577058255213">
+    <state x="570" y="253" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1680.1010/1680.0.1280.984@0.0.1680.1010" timestamp="1577182369806" />
+    <state x="620" y="261" key="FileChooserDialogImpl" timestamp="1577137768787">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1637" height="251" key="GridCell.Tab.0.right/0.0.1680.1010/1680.0.1280.984@0.0.1680.1010" timestamp="1577058255213" />
+    <state x="620" y="261" key="FileChooserDialogImpl/0.0.1680.1010/1680.0.1280.984@0.0.1680.1010" timestamp="1577137768787" />
+    <state width="1237" height="242" key="GridCell.Tab.0.bottom" timestamp="1577771372705">
+      <screen x="1680" y="0" width="1280" height="984" />
+    </state>
+    <state width="1637" height="242" key="GridCell.Tab.0.bottom/0.0.1680.1010/1680.0.1280.984@0.0.1680.1010" timestamp="1577765877141" />
+    <state width="1237" height="242" key="GridCell.Tab.0.bottom/0.0.1680.1010/1680.0.1280.984@1680.0.1280.984" timestamp="1577771372705" />
+    <state width="1237" height="242" key="GridCell.Tab.0.center" timestamp="1577771372705">
+      <screen x="1680" y="0" width="1280" height="984" />
+    </state>
+    <state width="1637" height="242" key="GridCell.Tab.0.center/0.0.1680.1010/1680.0.1280.984@0.0.1680.1010" timestamp="1577765877141" />
+    <state width="1237" height="242" key="GridCell.Tab.0.center/0.0.1680.1010/1680.0.1280.984@1680.0.1280.984" timestamp="1577771372705" />
+    <state width="1237" height="242" key="GridCell.Tab.0.left" timestamp="1577771372705">
+      <screen x="1680" y="0" width="1280" height="984" />
+    </state>
+    <state width="1637" height="242" key="GridCell.Tab.0.left/0.0.1680.1010/1680.0.1280.984@0.0.1680.1010" timestamp="1577765877141" />
+    <state width="1237" height="242" key="GridCell.Tab.0.left/0.0.1680.1010/1680.0.1280.984@1680.0.1280.984" timestamp="1577771372705" />
+    <state width="1237" height="242" key="GridCell.Tab.0.right" timestamp="1577771372705">
+      <screen x="1680" y="0" width="1280" height="984" />
+    </state>
+    <state width="1637" height="242" key="GridCell.Tab.0.right/0.0.1680.1010/1680.0.1280.984@0.0.1680.1010" timestamp="1577765877141" />
+    <state width="1237" height="242" key="GridCell.Tab.0.right/0.0.1680.1010/1680.0.1280.984@1680.0.1280.984" timestamp="1577771372705" />
+    <state x="222" y="70" key="new project wizard" timestamp="1577350070234">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="222" y="70" key="new project wizard/0.0.1680.1010/1680.0.1280.984@0.0.1680.1010" timestamp="1577350070234" />
+    <state x="496" y="233" key="run.anything.popup" timestamp="1577765009180">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="496" y="233" key="run.anything.popup/0.0.1680.1010/1680.0.1280.984@0.0.1680.1010" timestamp="1577765009180" />
+    <state x="1983" y="211" width="672" height="678" key="search.everywhere.popup" timestamp="1577765703144">
+      <screen x="1680" y="0" width="1280" height="984" />
+    </state>
+    <state x="1983" y="211" width="672" height="678" key="search.everywhere.popup/0.0.1680.1010/1680.0.1280.984@1680.0.1280.984" timestamp="1577765703144" />
   </component>
 </project>

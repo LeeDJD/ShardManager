@@ -1,8 +1,7 @@
 package space.kappes.Shardmanager.io.config;
 
+import org.apache.log4j.Logger;
 import org.json.JSONObject;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -14,7 +13,7 @@ import java.util.Scanner;
 public class Config extends JSONObject {
 
     private final File configFile;
-    private final Logger logger = LoggerFactory.getLogger(getClass());
+    private final Logger logger = Logger.getLogger(getClass());
 
     /**
      * Creates a {@link Config} object with a custom file

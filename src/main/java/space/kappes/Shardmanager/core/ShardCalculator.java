@@ -1,32 +1,47 @@
 package space.kappes.Shardmanager.core;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import okhttp3.Headers;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
+import org.apache.log4j.Logger;
+import org.json.JSONObject;
 import space.kappes.Shardmanager.ShardManager;
+
+import java.io.IOException;
 
 public class ShardCalculator {
 
-    private final Logger logger = LoggerFactory.getLogger(getClass());
+    private final Logger logger = Logger.getLogger(getClass());
     private final ShardManager shardManager;
-    private int optimalShardCount;
-    private int shardsPerInstance;
-    private int availableInstances;
+    private int optimalShardCount = 0;
+    private int shardsPerInstance = 0;
 
-    public ShardCalculator(ShardManager shardManager){
+    public ShardCalculator(ShardManager shardManager) {
         this.shardManager = shardManager;
-        calculate();
     }
 
-    private void calculate() {
-        //TODO: Web Request to Discord API
-        optimalShardCount = 1;
+    public void calculate() {
+        logger.debug("Fetching shardcount of discord api...");
+        OkHttpClient client = new OkHttpClient();
+        Request request = new Request.Builder()
+                .url("https://discordapp.com/api/gateway/bot")
+                .header("Authorization", String.format("Bot %s", shardManager.getConfigManager().getBotToken()))
+                .header("User-Agent", "ShardManager")
+                .build();
 
-        availableInstances = shardManager.getShardMap().size();
-        if (availableInstances == 1) {
-            shardsPerInstance = optimalShardCount;
-        } else {
-            shardsPerInstance = (int) Math.ceil(optimalShardCount / availableInstances);
+        try (Response response = client.newCall(request).execute()) {
+            optimalShardCount = new JSONObject(response.body().string()).getInt("shards");
+        } catch (IOException e) {
+            logger.error("Error fetching shardcount from discord api", e);
         }
+        int availableInstances = shardManager.getShardMap().size();
+        if (availableInstances <= 0)
+            return;
+        if (availableInstances >= optimalShardCount)
+            shardsPerInstance = 1;
+        else
+            shardsPerInstance = (int) Math.ceil(optimalShardCount / availableInstances);
     }
 
     public int getOptimalShardCount() {
@@ -37,7 +52,4 @@ public class ShardCalculator {
         return shardsPerInstance;
     }
 
-    public int getAvailableInstances() {
-        return availableInstances;
-    }
 }
