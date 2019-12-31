@@ -1,4 +1,4 @@
-name: Java CI
+name: Shardmanager Gradle CI
 
 on: [push]
 
@@ -13,5 +13,7 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 13.0.1
-    - name: Build with Maven
-      run: mvn compile
+    - name: Build with Gradle
+      run: |
+        chmod +x ./gradlew
+        ./gradlew clean shadowJar
